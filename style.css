@@ -66,6 +66,7 @@ body {
     font-weight: 700;
     line-height: 1.2;
 }
+
 .home-content h3 {
     font-size: 32px;
     font-weight: 700;
@@ -241,4 +242,10 @@ body {
 
 .imageedits {
     justify-content: space-between;
+}
+
+@keyframes showRight {
+    100% {
+        width: 0;
+    }
 }
