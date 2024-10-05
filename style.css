@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 
+html{
+    scroll-behavior:smooth;
+}
 *{
     margin: 0;
     padding: 0;
@@ -26,10 +29,11 @@ body {
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 30px;
     color: #ededed;
     text-decoration: none;
     font-weight: 600;
+    letter-spacing: 2px;
 }
 
 .navbar a {
@@ -37,7 +41,7 @@ body {
     color: #ededed;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 35px;
+    margin-left: 85px;
     transition: 0.25s;
 }
 
@@ -199,4 +203,42 @@ body {
     font-size: 40px;
     color: #ededed;
     margin-bottom: 8px;
+}
+
+.homer {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.boxx2 {
+    border: 6px solid #ededed;
+    border-radius: 88px;
+    margin-left: 10%;
+    padding: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+    max width: 100px;
+}
+
+.boxx2 h1 {
+    font-size: 50px;
+    font-weight: 600px;
+    line-height: 2;
+    text-align: center;
+    margin: 0px;
+}  
+
+.boxx2 p {
+    font-size: 18px;
+    font-weight: 50px;
+    text-align: justify;
+}
+
+.imageedits {
+    justify-content: space-between;
 }
