@@ -26,6 +26,7 @@ body {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    animation: slideDown .5s ease-in-out;
 }
 
 .logo {
@@ -42,11 +43,12 @@ body {
     text-decoration: none;
     font-weight: 500;
     margin-left: 85px;
-    transition: 0.25s;
+    transition: color 0.4s, transform 0.3s;
 }
 
 .navbar a:hover{
     color: #00abf0;
+    transform: scale(1.1);
 }
 
 .home {
@@ -55,13 +57,14 @@ body {
     display: flex;
     align-items: center;
     padding: 0 10%;
+    animation: fadeIn 1s ease-in;
 }
 
 .home-content {
-    max-width: 600px;
+    max-width: 50%;
 }
 .home-content h1 {
-    font-size: 56px;
+    font-size: 350%;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -104,7 +107,8 @@ body {
     overflow: hidden;
 }
 .btn-box a:hover {
-    color: #081b29;    
+    color: #081b29;  
+    transform: translateY(-3px);  
 }
 
 .btn-box a::before {
@@ -139,6 +143,7 @@ body {
     display: flex;
     align-items: center;
     padding: 0 10%;
+    animation: fadeIn 1s ease-in;
 }
 
 .boxx {
@@ -155,7 +160,6 @@ body {
 }  
 .boxx p {
     font-size: 18px;
-    font-weight: 50px;
     text-align: justify;
 }
 
@@ -213,6 +217,7 @@ body {
     padding: 0 10%;
     justify-content: space-between;
     text-align: center;
+    animation: fadeIn 1s ease-in;
 }
 
 .boxx2 {
@@ -241,6 +246,14 @@ body {
 .imageedits {
     justify-content: space-between;
 }
+.imageedits img {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+.imageedits img:nth-child(1) {animation-delay: .1s;}
+.imageedits img:nth-child(2) {animation-delay: .2s;}
+.imageedits img:nth-child(3) {animation-delay: .3s;}
+.imageedits img:nth-child(4) {animation-delay: .4s;}
 
 form {
     width: 50vw;
@@ -251,6 +264,7 @@ form {
     box-shadow: 0 5px 9px rgba(0, 0, 0, 0.3);
     text-align: left;
     margin-bottom: 5%;
+    animation: fadeIn 1s ease-in;
 }
 form label{
     font-size: 1.25vw;
@@ -278,7 +292,7 @@ form button{
     background: #00abf0;
     cursor: pointer;
     font-size: 18px;
-    transition: .5s;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
 }
 
 form button:hover{
@@ -289,8 +303,102 @@ form button:hover{
     box-shadow: 0 4px 8px rgba(1, 27, 141, 0.2)
 }
 
-@keyframes showRight {
-    100% {
-        width: 0;
+/*Keyframes for Animation*/
+@keyframes fadeIn{
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Media query for max-width: 600px */
+@media (max-width: 600px) {
+    .header {
+        padding: 15px 5%;
+        flex-direction: column; 
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        margin-left: 20px; 
+        font-size: 16px; 
+    }
+
+    .home-content {
+        max-width: 100%;  
+        text-align: center; 
+    }
+
+    .home-content h1 {
+        font-size: 2rem;   
+    }
+
+    .home-content h3 {
+        font-size: 1.5rem;   
+    }
+
+    .home-content p {
+        font-size: 1rem; 
+    }
+
+    .btn-box {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .btn-box a {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .homes, .homer, .homex {
+        padding: 0 5%;
+        height: auto;
+    }
+
+    .boxx, .boxx2 {
+        padding: 20px;   
+        margin: 10px; 
+    }
+
+    .boxx h1, .boxx2 h1 {
+        font-size: 1.5rem; 
+    }
+
+    .form {
+        width: 90vw; 
+    }
+
+    form label {
+        font-size: 1rem; 
+    }
+
+    form button {
+        font-size: 1rem; 
+    }
+
+    .home-sci {
+        flex-direction: column; 
+        width: 40px; 
+        height: 20px;
+        align-items: center;
+    }
+
+    .home-sci a {
+        width: 80px;
+        height: 80px;
+        font-size: 40px; 
     }
 }
